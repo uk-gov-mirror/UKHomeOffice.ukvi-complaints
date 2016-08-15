@@ -9,5 +9,13 @@
         "label": "I am the applicant"
       }
     }
+  },
+  "applicants-name": {
+    "label": {
+      "applicant": {
+        "false": "What is the applicant's name?"
+      },
+      "default": "What is your name"
+    }
   }
 }

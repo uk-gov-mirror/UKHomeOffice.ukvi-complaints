@@ -28,7 +28,14 @@ module.exports = {
         section: 'personal-contact-details'
       }
     },
-    '/applicant-name': {
+    '/applicants-name': {
+      fields: ['applicants-name'],
+      next: '/applicants-dob',
+      locals: {
+        section: 'personal-contact-details'
+      }
+    },
+    '/applicants-dob': {
       locals: {
         section: 'personal-contact-details'
       }

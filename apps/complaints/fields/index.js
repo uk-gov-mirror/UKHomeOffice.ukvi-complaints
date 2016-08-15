@@ -12,6 +12,9 @@ module.exports = {
       value: 'representative',
       label: 'fields.who.options.representative.label'
     }]
-  }
+  },
+	'applicants-name': {
+		mixin: 'input-next',
+		validate: 'required'
+	}
 };
-
