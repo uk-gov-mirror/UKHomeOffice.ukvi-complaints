@@ -15,6 +15,13 @@ module.exports = {
         'accept-declaration'
       ],
       next: '/applicant-name',
+      forks: [{
+        target: '/representative-name',
+        condition: {
+          field: 'applicant',
+          value: 'false'
+        }
+      }],
       locals: {
         section: 'personal-contact-details'
       }
@@ -25,32 +32,27 @@ module.exports = {
       locals: {
         section: 'personal-contact-details'
       }
+    },
+    '/representative-name': {
+      fields: ['representative-name'],
+      next: '/contact-details',
+      locals: {
+        section: 'personal-contact-details'
+      }
+    },
+    '/applicant-dob': {
+      next: '/contact-details',
+      locals: {
+        section: 'personal-contact-details'
+      }
+    },
+    '/contact-details': {
+      next: '/complaint-type',
+      locals: {
+        section: 'personal-contact-details'
+      }
+    },
+    '/complaint-type': {
     }
-  },
-  '/applicant-dob': {
-    next: '/applicant-contact',
-    locals: {
-      section: 'personal-contact-details'
-    }
-  },
-  '/applicant-contact': {
-    next: '/complaint-type',
-    locals: {
-      section: 'personal-contact-details'
-    }
-  },
-  '/representative-name': {
-    next: '/representative-contact',
-    locals: {
-      section: 'personal-contact-details'
-    }
-  },
-  '/representative-contact': {
-    next: '/complaint-type',
-    locals: {
-      section: 'personal-contact-details'
-    }
-  },
-  '/complaint-type': {
   }
 };

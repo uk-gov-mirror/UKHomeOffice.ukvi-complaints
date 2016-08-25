@@ -20,5 +20,8 @@
       },
       "default": "Tell us the applicant's family name"
     }
+  },
+  "representative-name": {
+    "required": "Tell us your name"
   }
 }

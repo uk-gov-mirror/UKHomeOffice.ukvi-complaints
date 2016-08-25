@@ -35,5 +35,9 @@ module.exports = {
   'applicant-family-name': {
     mixin: 'input-text',
     validate: ['required']
-  }
+  },
+	'representative-name': {
+		mixin: 'input-text',
+		validate: 'required'
+	}
 };

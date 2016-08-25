@@ -30,5 +30,8 @@
       },
       "default": "What's the applicant's family name?"
     }
+  },
+  "representative-name": {
+    "label": "What is your name?"
   }
 }
