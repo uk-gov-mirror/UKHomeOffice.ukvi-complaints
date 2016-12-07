@@ -18,14 +18,6 @@ Scenario('The correct fields elements are on the page', (
   I.seeElements(complaintTimePage['complaint-time']);
 });
 
-Scenario('An error is shown if field is not completed', (
-  I,
-  complaintTimePage
-) => {
-  I.submitForm();
-  I.seeErrors(complaintTimePage['complaint-time']);
-});
-
 Scenario('On submitting the completed step I am taken to phoned from step', (
   I,
   complaintTimePage,

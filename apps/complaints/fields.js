@@ -149,8 +149,7 @@ module.exports = {
   },
   'complaint-time': {
     labelClassName: 'visuallyhidden',
-    mixin: 'input-text',
-    validate: 'required'
+    mixin: 'input-text'
   },
   'phoned-from': {
     labelClassName: 'visuallyhidden',
