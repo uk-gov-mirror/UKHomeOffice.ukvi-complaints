@@ -9,7 +9,17 @@ steps:
   image: node:10
   commands:
   - npm --loglevel warn install
-  - npm run test
+  when:
+    branch: [ master, features/* ]
+    event: push
+
+- name: test
+  pull: if-not-exists
+  image: mcr.microsoft.com/playwright:bionic
+  commands:
+    - npm i -s && npm run build
+    - npm run test:sqs:server
+    - npm run sqs-cleanup
   when:
     branch: [ master, features/* ]
     event: push
