@@ -6,9 +6,9 @@ const addDynamicSettings = (settings) => {
   settings.root = __dirname;
   settings.start = false;
 
-  if (process.env.REDIS_URL) {
-    settings.redis = process.env.REDIS_URL;
-  }
+  // if (process.env.REDIS_URL) {
+  //   settings.redis = process.env.REDIS_URL;
+  // }
 
   return settings;
 };
